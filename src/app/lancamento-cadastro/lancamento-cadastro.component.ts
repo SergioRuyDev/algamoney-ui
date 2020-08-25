@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class LancamentoCadastroComponent implements OnInit {
 
   br: any;
+  tipos = [
+    { label: 'Receita', value: 'RECEITA'},
+    { label: 'Despesa', value: 'DESPESA'},
+  ];
+
 
   ngOnInit() {
     this.br = {
