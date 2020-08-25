@@ -13,6 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { InputTextModule } from 'primeng/inputtext';
+import { CalendarModule } from 'primeng/calendar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { InputTextModule } from 'primeng/inputtext';
     LancamentoCadastroComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    CalendarModule,
     InputTextareaModule,
     BrowserModule,
     InputTextModule,
