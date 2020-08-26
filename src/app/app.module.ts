@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { InputMaskModule } from 'primeng/inputmask';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DropdownModule } from 'primeng/dropdown';
 import { SelectButtonModule } from 'primeng/selectbutton';
@@ -18,6 +19,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,9 +29,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LancamentosPesquisaComponent,
     NavbarComponent,
     PessoaPesquisaComponent,
-    LancamentoCadastroComponent
+    LancamentoCadastroComponent,
+    PessoaCadastroComponent
   ],
   imports: [
+    InputMaskModule,
     InputNumberModule,
     DropdownModule,
     SelectButtonModule,
@@ -40,7 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     AppRoutingModule,
     TableModule,
-    TooltipModule
+    TooltipModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
