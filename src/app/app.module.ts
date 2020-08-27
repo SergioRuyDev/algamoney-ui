@@ -21,6 +21,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { FormsModule } from '@angular/forms';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     PessoaPesquisaComponent,
     LancamentoCadastroComponent,
-    PessoaCadastroComponent
+    PessoaCadastroComponent,
+    MessageComponent
   ],
   imports: [
     InputMaskModule,
