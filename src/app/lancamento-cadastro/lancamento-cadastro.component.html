@@ -1,5 +1,6 @@
 <div class="container">
-  <form autocomplete="off">
+  <form #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)" autocomplete="off">
+
 
     <div class="ui-g">
       <div class="ui-g-12">
@@ -14,7 +15,8 @@
         <label>Vencimento</label>
         <p-calendar dateFormat="dd/mm/yy"
                     [locale]="br" [inline]="false" [readonlyInput]="false"
-        [showIcon]="false"></p-calendar>
+        [showIcon]="false" name="vencimento" ngModel #vencimento="ngModel" required></p-calendar>
+        <app-message [control]="vencimento" error="required" text="Informe uma data de vencimento"></app-message>
       </div>
 
       <div class="ui-g-6 ui-md-3 ui-fluid">
@@ -36,20 +38,23 @@
       <div class="ui-g-12 ui-md-3 ui-fluid">
         <label>Valor</label>
         <p-inputNumber mode="decimal" locale="pt-BR" [minFractionDigits]="2"
-                       placeholder="0,00" name="valor" ngModel></p-inputNumber>
+                       placeholder="0,00" name="valor" ngModel #valor="ngModel" required></p-inputNumber>
+        <app-message [control]="valor" error="required" text="Informe o valor"></app-message>
 
       </div>
 
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Categoria {{ categoria.value }}</label>
-        <p-dropdown [options]="categorias" placeholder="Selecione"
-        #categoria></p-dropdown>
+        <p-dropdown [options]="categorias" placeholder="Selecione" name="categoria" ngModel
+        #categoria="ngModel" required></p-dropdown>
+        <app-message [control]="categoria" error="required" text="Informe a categoria"></app-message>
       </div>
 
       <div class="ui-g-12 ui-md-6 ui-fluid">
         <label>Pessoa {{ pessoa.value }}</label>
-        <p-dropdown [options]="pessoas" placeholder="Selecione" [filter]="true"
-                    #pessoa></p-dropdown>
+        <p-dropdown [options]="pessoas" placeholder="Selecione" [filter]="true" name="pessoa" ngModel
+                    #pessoa="ngModel" required></p-dropdown>
+        <app-message [control]="pessoa" error="required"></app-message>
       </div>
 
       <div class="ui-g-12 ui-fluid">
@@ -57,8 +62,9 @@
         <textarea pInputTextarea rows="3"></textarea>
       </div>
       <div class="ui-g-12">
-        <button pButton pRipple type="submit" label="Salvar" class="p-button-info"></button>
-        <button pButton pRipple type="submit" label="Novo" class="p-button-info" disabled="true"></button>
+        <button pButton type="submit" label="Salvar" class="p-button-info"
+                [disabled]="!usuarioForm.valid"></button>
+        <button pButton type="submit" label="Novo" class="p-button-info" class="ui-button-info"></button>
         <a href="javascript:;">Voltar para a pesquisa</a>
       </div>
     </div>

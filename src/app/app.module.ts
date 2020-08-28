@@ -34,22 +34,22 @@ import { MessageComponent } from './message/message.component';
     PessoaCadastroComponent,
     MessageComponent
   ],
-  imports: [
-    InputMaskModule,
-    InputNumberModule,
-    DropdownModule,
-    SelectButtonModule,
-    BrowserAnimationsModule,
-    CalendarModule,
-    InputTextareaModule,
-    BrowserModule,
-    InputTextModule,
-    ButtonModule,
-    AppRoutingModule,
-    TableModule,
-    TooltipModule,
-    FormsModule
-  ],
+    imports: [
+        InputMaskModule,
+        InputNumberModule,
+        DropdownModule,
+        SelectButtonModule,
+        BrowserAnimationsModule,
+        CalendarModule,
+        InputTextareaModule,
+        BrowserModule,
+        InputTextModule,
+        ButtonModule,
+        AppRoutingModule,
+        TableModule,
+        TooltipModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
