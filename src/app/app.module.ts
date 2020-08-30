@@ -23,6 +23,7 @@ import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.compo
 import { FormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
 import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
+import { PessoaGridComponent } from './pessoa-grid/pessoa-grid.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.compo
     LancamentoCadastroComponent,
     PessoaCadastroComponent,
     MessageComponent,
-    LancamentoGridComponent
+    LancamentoGridComponent,
+    PessoaGridComponent
   ],
     imports: [
         InputMaskModule,
