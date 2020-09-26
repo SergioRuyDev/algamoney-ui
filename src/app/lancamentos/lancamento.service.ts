@@ -50,4 +50,11 @@ export class LancamentoService {
         return resultado;
       })
   }
+
+  excluir(codigo: number): Promise<void> {
+
+    return this.http.delete(`${this.lancamentosUrl}/${codigo}`, { headers:{'Authorization':'Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg=='}})
+      .toPromise()
+      .then(() => null);
+  }
 }

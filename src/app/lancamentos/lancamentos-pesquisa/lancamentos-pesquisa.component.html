@@ -33,7 +33,8 @@
   <div class="ui-g">
       <div class="ui-g-12">
         <p-table [value]="lancamentos" [responsive]="true" [paginator]="true" [rows]="filtro.itensPorPagina"
-                 [lazy]="true" [totalRecords]="totalRegistros" (onLazyLoad)="aoMudarPagina($event)">
+                 [lazy]="true" [totalRecords]="totalRegistros" (onLazyLoad)="aoMudarPagina($event)"
+        #tabela>
           <ng-template pTemplate="emptymessage">
             Nenhum lançamento encontrado.
           </ng-template>
@@ -57,7 +58,8 @@
                 {{lancamento.valor | currency:'BRL': true:'1.2-3'}}</td>
               <td class="col-acoes">
                 <a pButton icon="pi pi-pencil" style="margin-right: 3px" pTooltip="Editar" tooltipPosition="top"></a>
-                <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+                <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"
+                (click)="excluir(lancamento)"></button>
               </td>
             </tr>
           </ng-template>
